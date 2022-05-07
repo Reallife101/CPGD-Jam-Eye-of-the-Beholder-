@@ -610,17 +610,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!114 &779829274 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5904481610190675820, guid: e3b2d2b66a71dac409d1e2a6873170d1, type: 3}
-  m_PrefabInstance: {fileID: 2017924061}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f325443c6a139344837984662fdb6f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &933195603
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,7 +722,6 @@ MonoBehaviour:
   he: {fileID: 933195609}
   doubleJumpEnabled: 0
   numJumps: 2
-  movement: {fileID: 779829274}
 --- !u!114 &933195609
 MonoBehaviour:
   m_ObjectHideFlags: 0
