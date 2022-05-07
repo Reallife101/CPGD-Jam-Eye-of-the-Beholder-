@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class interactPlatformEye : Interactable
+public class interactNormalEye : Interactable
 {
     private platformSwitcher ps;
     private void Start()
@@ -11,7 +11,6 @@ public class interactPlatformEye : Interactable
     }
     public override void interact()
     {
-        Debug.Log("Interacting!");
-        ps.turnOff();
+        ps.turnOn();
     }
 }
