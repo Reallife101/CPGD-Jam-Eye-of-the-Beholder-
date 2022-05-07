@@ -48,8 +48,8 @@ Material:
     - Vector1_DF019693: 0.5
     - WOBBLE: 0
     - _DistortionStrength: 0.2
-    - _ScanlineHeight: 10
-    - _ScanlineStrength: 0.5
+    - _ScanlineHeight: 3
+    - _ScanlineStrength: 0.1
     - _StaticStrength: 0.01
     m_Colors:
     - _CRTWarpStrength: {r: 1, g: 1, b: 0, a: 0}
