@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a9f99b7f4fe55419d7dc1fadbc4944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 5
+  mouseSensitivity: 1.5
   playerBody: {fileID: 1830586289}
 --- !u!4 &200324340 stripped
 Transform:
@@ -738,7 +738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1830586291}
-  movementSpeed: 12
+  movementSpeed: 6
   gravity: -9.81
   jumpHeight: 3
   groundCheck: {fileID: 1158840375}
