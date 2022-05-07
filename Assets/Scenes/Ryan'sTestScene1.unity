@@ -1509,6 +1509,10 @@ PrefabInstance:
       propertyPath: platformOverlay
       value: 
       objectReference: {fileID: 1096031188}
+    - target: {fileID: 5144413944430218534, guid: fbfda806fb0dde54d9a91a6237af42fc, type: 3}
+      propertyPath: m_Volume
+      value: 0.85
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbfda806fb0dde54d9a91a6237af42fc, type: 3}
 --- !u!1001 &6425036649496328484
