@@ -28,7 +28,7 @@ public class interact : MonoBehaviour
 
                 oldhit = hit.transform;
 
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Fire1"))
                 {
                     hit.transform.GetComponent<Interactable>().interact();
                 }
