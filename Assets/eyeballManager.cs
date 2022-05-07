@@ -15,6 +15,8 @@ public class eyeballManager : MonoBehaviour
     [SerializeField] float endAlpha = 150f;
 
     [SerializeField] Image black;
+    [SerializeField] AudioSource au;
+    [SerializeField] AudioClip eyeRip;
 
     [SerializeField] GameObject eyeBleed;
     [SerializeField] GameObject platformOverlay;
@@ -57,6 +59,8 @@ public class eyeballManager : MonoBehaviour
             yield return null;
         }
         black.color = new Color(0f, 0f, 0f, endAlpha);
+        au.PlayOneShot(eyeRip, .8f);
+        yield return new WaitForSeconds(.5f);
 
         eyeBleed.SetActive(true);
         platformOverlay.SetActive(false);
@@ -83,6 +87,9 @@ public class eyeballManager : MonoBehaviour
         }
         black.color = new Color(0f, 0f, 0f, endAlpha);
 
+        au.PlayOneShot(eyeRip, .8f);
+        yield return new WaitForSeconds(.5f);
+
         eyeBleed.SetActive(false);
         platformOverlay.SetActive(false);
         ps.turnOn();
@@ -108,6 +115,9 @@ public class eyeballManager : MonoBehaviour
             yield return null;
         }
         black.color = new Color(0f, 0f, 0f, endAlpha);
+
+        au.PlayOneShot(eyeRip, .8f);
+        yield return new WaitForSeconds(.5f);
 
         eyeBleed.SetActive(false);
         platformOverlay.SetActive(true);
