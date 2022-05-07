@@ -26,9 +26,10 @@ public class movement : MonoBehaviour
     
     [SerializeField]
     List<AudioClip> footsteps;
+    [SerializeField] List<AudioClip> jumpSFXS;
 
     private int footstepCounter;
-    private AudioSource audioPlayer;
+    private AudioSource[] audioPlayers;
     private float footstepTime;
 
 
@@ -36,11 +37,10 @@ public class movement : MonoBehaviour
     {
         currentSpeed = movementSpeed;
         lastMove = Vector3.zero;
-        /*
         footstepCounter = 0;
         footstepTime = 3f;
-        audioPlayer = GetComponent<AudioSource>();
-        */
+        audioPlayers = GetComponents<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -70,7 +70,7 @@ public class movement : MonoBehaviour
             lastMove = move;
             if (move.magnitude > 0f)
             {
-                //playFootstep();
+                playFootstep();
             }
 
         }
@@ -97,7 +97,7 @@ public class movement : MonoBehaviour
     {
         if (footstepTime > footsteps[footstepCounter].length)
         {
-            audioPlayer.PlayOneShot(footsteps[footstepCounter], 0.05f);
+            audioPlayers[0].PlayOneShot(footsteps[footstepCounter], 0.1f);
             footstepTime = 0;
             footstepCounter += 1;
             if (footstepCounter == footsteps.Count)
@@ -121,6 +121,7 @@ public class movement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            audioPlayers[1].PlayOneShot(jumpSFXS[Random.Range(0, jumpSFXS.Count)], .5f);
         }
     }
 

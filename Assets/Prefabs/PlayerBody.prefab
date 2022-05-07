@@ -157,7 +157,9 @@ MonoBehaviour:
   isGrounded: 0
   lastMove: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
-  footsteps: []
+  footsteps:
+  - {fileID: 8300000, guid: 24d986baa0302a446bec2548e2cfd5a5, type: 3}
+  - {fileID: 8300000, guid: 12da5885473820c4f90ca0a51f198def, type: 3}
 --- !u!143 &5904481610190675821
 CharacterController:
   m_ObjectHideFlags: 0
