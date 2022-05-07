@@ -11,6 +11,9 @@ public class movement : MonoBehaviour
     public float gravity = -9.81f;
     public float jumpHeight = 3.0f;
 
+    // Double Jump
+    public interactDoubleJump dj;
+
     //Check ground variables
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -115,6 +118,7 @@ public class movement : MonoBehaviour
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
+            dj.numJumps = 1;
         }
 
         // Jump
@@ -122,6 +126,17 @@ public class movement : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             audioPlayers[1].PlayOneShot(jumpSFXS[Random.Range(0, jumpSFXS.Count)], .5f);
+        }
+
+        // Double jump
+        else if (dj.doubleJumpEnabled && Input.GetButtonDown("Jump"))
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && dj.numJumps > 0)
+            {
+                Debug.Log("double jump");
+                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+                dj.numJumps--;
+            }
         }
     }
 
