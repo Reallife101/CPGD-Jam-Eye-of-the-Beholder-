@@ -13,6 +13,7 @@ public class eyeballManager : MonoBehaviour
     [SerializeField] Camera cam;
     [SerializeField] float transitionTime = 0.2f;
     [SerializeField] float endAlpha = 150f;
+    [SerializeField] Animator arm;
 
     [SerializeField] Image black;
     [SerializeField] AudioSource au;
@@ -51,6 +52,7 @@ public class eyeballManager : MonoBehaviour
 
     IEnumerator eyebleed()
     {
+        arm.SetBool("handUp", true);
         float timeElapsed = 0;
         while (timeElapsed < transitionTime)
         {
@@ -67,6 +69,7 @@ public class eyeballManager : MonoBehaviour
         ps.turnOn();
         cam.fieldOfView = 50f;
 
+        arm.SetBool("handUp", false);
         timeElapsed = 0;
         while (timeElapsed < transitionTime)
         {
@@ -79,6 +82,7 @@ public class eyeballManager : MonoBehaviour
     IEnumerator deafultEye()
     {
         float timeElapsed = 0;
+        arm.SetBool("handUp", true);
         while (timeElapsed < transitionTime)
         {
             black.color = new Color(0f, 0f, 0f, Mathf.Lerp(0, endAlpha, timeElapsed / transitionTime));
@@ -96,6 +100,7 @@ public class eyeballManager : MonoBehaviour
         cam.fieldOfView = 50f;
 
         timeElapsed = 0;
+        arm.SetBool("handUp", false);
         while (timeElapsed < transitionTime)
         {
             black.color = new Color(0f, 0f, 0f, Mathf.Lerp(endAlpha, 0, timeElapsed / transitionTime));
@@ -108,6 +113,7 @@ public class eyeballManager : MonoBehaviour
     IEnumerator platformEye()
     {
         float timeElapsed = 0;
+        arm.SetBool("handUp", true);
         while (timeElapsed < transitionTime)
         {
             black.color = new Color(0f, 0f, 0f, Mathf.Lerp(0, endAlpha, timeElapsed / transitionTime));
@@ -125,6 +131,7 @@ public class eyeballManager : MonoBehaviour
         cam.fieldOfView = 60f;
 
         timeElapsed = 0;
+        arm.SetBool("handUp", false);
         while (timeElapsed < transitionTime)
         {
             black.color = new Color(0f, 0f, 0f, Mathf.Lerp(endAlpha, 0, timeElapsed / transitionTime));
