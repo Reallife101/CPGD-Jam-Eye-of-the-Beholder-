@@ -4,24 +4,15 @@ using UnityEngine;
 
 public class InteractDoorSwitchEye : Interactable
 {
-    private GameObject door;
-
-    void Start()
-    {
-        //door = GetComponent<BoxCollider>();
-    }
+    [SerializeField] Animator door = null; 
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("pressed fire");
-            interact();
-        }
+        
     }
 
     public override void interact()
     {
-        //door.enabled = false;
+        door.SetBool("isOpen", true);
     }
 }
