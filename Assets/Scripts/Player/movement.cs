@@ -52,6 +52,7 @@ public class movement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         handleJump();
+        handleSpeed();
 
 
         // Move Character
@@ -78,6 +79,18 @@ public class movement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    void handleSpeed()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            currentSpeed = 2 * movementSpeed;
+        }
+        else
+        {
+            currentSpeed = movementSpeed;
+        }
     }
 
     void playFootstep()
