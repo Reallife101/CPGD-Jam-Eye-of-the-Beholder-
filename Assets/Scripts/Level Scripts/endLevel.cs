@@ -11,6 +11,7 @@ public class endLevel : MonoBehaviour
         if (other.tag == "Player")
         {
             Debug.Log("Load: " + levelName);
+            SceneManager.LoadScene(levelName);
         }
     }
 }
