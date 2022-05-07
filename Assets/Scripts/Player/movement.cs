@@ -118,7 +118,10 @@ public class movement : MonoBehaviour
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
-            dj.numJumps = 1;
+            if (dj != null)
+            {
+                dj.numJumps = 1;
+            }
         }
 
         // Jump
@@ -129,7 +132,7 @@ public class movement : MonoBehaviour
         }
 
         // Double jump
-        else if (dj.doubleJumpEnabled && Input.GetButtonDown("Jump"))
+        else if (dj != null && dj.doubleJumpEnabled && Input.GetButtonDown("Jump"))
         {
             if (Input.GetKeyDown(KeyCode.Space) && dj.numJumps > 0)
             {
