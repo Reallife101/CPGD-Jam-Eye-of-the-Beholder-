@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class destroyEye : MonoBehaviour
 {
-    private platformSwitcher ps;
     private eyeballManager em;
     private void Start()
     {
-        ps = GameObject.FindGameObjectWithTag("GameManager").GetComponent<platformSwitcher>();
         em = GameObject.FindGameObjectWithTag("GameManager").GetComponent<eyeballManager>();
     }
 
@@ -17,7 +15,6 @@ public class destroyEye : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("Fire2"))
         {
-            ps.turnOn();
             em.currentEyeball = -1;
         }
     }
