@@ -7,10 +7,12 @@ public class interact : MonoBehaviour
     [SerializeField] float interactDistance;
     [SerializeField] GameObject camera;
     [SerializeField] LayerMask player;
+
+    private Transform oldhit;
     // Start is called before the first frame update
     void Start()
     {
-        
+        oldhit = null;
     }
 
     // Update is called once per frame
@@ -22,12 +24,22 @@ public class interact : MonoBehaviour
         {
             if (hit.transform.GetComponent<Interactable>())
             {
+                hit.transform.GetComponent<Interactable>().he.highlighted = true;
+
+                oldhit = hit.transform;
+
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     hit.transform.GetComponent<Interactable>().interact();
                 }
             }
         }
+        else if (oldhit != null)
+        {
+            oldhit.GetComponent<Interactable>().he.highlighted = false;
+            oldhit = null;
+        }
 
     }
+
 }
