@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class InteractDoorSwitchEye : Interactable
 {
-    [SerializeField] Animator door = null;
-    [SerializeField] AudioClip ac;
+    public bool pickedUp = false;
 
 
     public override void interact()
     {
-        door.SetBool("isOpen", true);
-        GetComponent<AudioSource>().PlayOneShot(ac, .9f);
+        pickedUp = true;
     }
 }
