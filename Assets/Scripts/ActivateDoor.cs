@@ -28,6 +28,7 @@ public class ActivateDoor : Interactable
             door.SetBool("isOpen", true);
             GetComponent<AudioSource>().PlayOneShot(ac, .9f);
             GameObject.FindGameObjectWithTag("GameManager").GetComponent<eyeballManager>().keyEyeAnim(false);
+            eye.pickedUp = false;
         }
     }
 }
