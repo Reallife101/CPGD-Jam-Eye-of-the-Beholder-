@@ -138,6 +138,7 @@ public class movement : MonoBehaviour
             {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 dj.numJumps--;
+                audioPlayers[1].PlayOneShot(jumpSFXS[Random.Range(0, jumpSFXS.Count)], .5f);
             }
         }
     }
