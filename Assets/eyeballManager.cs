@@ -199,7 +199,7 @@ public class eyeballManager : MonoBehaviour
         eyeBleed.SetActive(false);
         jumpOverlay.SetActive(true);
         platformOverlay.SetActive(false);
-        ps.turnOff();
+        ps.turnOn();
         cam.fieldOfView = 60f;
 
         timeElapsed = 0;
