@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class endScene : MonoBehaviour
 {
@@ -15,16 +16,7 @@ public class endScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            StartCoroutine(jumpEye());
-        }
+        StartCoroutine(jumpEye());
     }
 
     IEnumerator jumpEye()
@@ -41,6 +33,7 @@ public class endScene : MonoBehaviour
             yield return null;
         }
         black.color = new Color(0f, 0f, 0f, endAlpha);
+        SceneManager.LoadScene("Menu");
         
     }
 }
