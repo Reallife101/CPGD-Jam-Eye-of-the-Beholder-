@@ -10,5 +10,6 @@ public class InteractDoorSwitchEye : Interactable
     public override void interact()
     {
         pickedUp = true;
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<eyeballManager>().keyEyeAnim(true);
     }
 }

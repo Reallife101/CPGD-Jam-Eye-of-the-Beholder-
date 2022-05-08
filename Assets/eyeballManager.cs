@@ -21,6 +21,7 @@ public class eyeballManager : MonoBehaviour
 
     [SerializeField] GameObject eyeBleed;
     [SerializeField] GameObject platformOverlay;
+    [SerializeField] GameObject keyHand;
 
     public int currentEyeball = 0;
 
@@ -48,6 +49,11 @@ public class eyeballManager : MonoBehaviour
         }
         lastEyeball = currentEyeball;
 
+    }
+
+    public void keyEyeAnim(bool t)
+    {
+        StartCoroutine(keyEye(t));
     }
 
     IEnumerator eyebleed()
@@ -132,6 +138,32 @@ public class eyeballManager : MonoBehaviour
 
         timeElapsed = 0;
         arm.SetBool("handUp", false);
+        while (timeElapsed < transitionTime)
+        {
+            black.color = new Color(0f, 0f, 0f, Mathf.Lerp(endAlpha, 0, timeElapsed / transitionTime));
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+        black.color = new Color(0f, 0f, 0f, 0f);
+    }
+
+    IEnumerator keyEye(bool t)
+    {
+        float timeElapsed = 0;
+        while (timeElapsed < transitionTime)
+        {
+            black.color = new Color(0f, 0f, 0f, Mathf.Lerp(0, endAlpha, timeElapsed / transitionTime));
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+        black.color = new Color(0f, 0f, 0f, endAlpha);
+
+        au.PlayOneShot(eyeRip, .8f);
+        yield return new WaitForSeconds(.5f);
+
+        keyHand.SetActive(t);
+
+        timeElapsed = 0;
         while (timeElapsed < transitionTime)
         {
             black.color = new Color(0f, 0f, 0f, Mathf.Lerp(endAlpha, 0, timeElapsed / transitionTime));
