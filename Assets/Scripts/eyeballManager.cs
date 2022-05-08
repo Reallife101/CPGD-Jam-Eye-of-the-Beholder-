@@ -17,7 +17,9 @@ public class eyeballManager : MonoBehaviour
 
     [SerializeField] Image black;
     [SerializeField] AudioSource au;
+    [SerializeField] AudioSource au2;
     [SerializeField] AudioClip eyeRip;
+    [SerializeField] List<AudioClip> pickupEyes;
 
     [SerializeField] GameObject eyeBleed;
     [SerializeField] GameObject platformOverlay;
@@ -130,6 +132,7 @@ public class eyeballManager : MonoBehaviour
             yield return null;
         }
         black.color = new Color(0f, 0f, 0f, 0f);
+        au2.PlayOneShot(pickupEyes[Random.Range(0, pickupEyes.Count)], .8f);
     }
 
     IEnumerator platformEye()
@@ -166,6 +169,7 @@ public class eyeballManager : MonoBehaviour
             yield return null;
         }
         black.color = new Color(0f, 0f, 0f, 0f);
+        au2.PlayOneShot(pickupEyes[Random.Range(0, pickupEyes.Count)], .8f);
     }
 
     IEnumerator keyEye(bool t)
@@ -196,6 +200,7 @@ public class eyeballManager : MonoBehaviour
             yield return null;
         }
         black.color = new Color(0f, 0f, 0f, 0f);
+        au2.PlayOneShot(pickupEyes[Random.Range(0, pickupEyes.Count)], .8f);
     }
 
     IEnumerator jumpEye()
@@ -233,6 +238,7 @@ public class eyeballManager : MonoBehaviour
             yield return null;
         }
         black.color = new Color(0f, 0f, 0f, 0f);
+        au2.PlayOneShot(pickupEyes[Random.Range(0, pickupEyes.Count)], .8f);
     }
 
 }
