@@ -26,7 +26,7 @@ public class respawnPlayer : MonoBehaviour
     
     public void respawn(Collider other)
     {
-        GetComponent<AudioSource>().PlayOneShot(acs[Random.Range(0, acs.Count)], .5f);
+        GetComponent<AudioSource>().PlayOneShot(acs[Random.Range(0, acs.Count)], .8f);
         other.GetComponent<CharacterController>().enabled = false;
         other.transform.position = respawnPoint;
         ps.turnOn();
