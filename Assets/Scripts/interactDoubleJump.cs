@@ -10,5 +10,6 @@ public class interactDoubleJump : Interactable
     public override void interact()
     {
         doubleJumpEnabled = true;
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<eyeballManager>().currentEyeball = 2; ;
     }
 }
