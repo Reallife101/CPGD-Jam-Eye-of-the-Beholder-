@@ -136,7 +136,6 @@ public class movement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && dj.numJumps > 0)
             {
-                Debug.Log("double jump");
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 dj.numJumps--;
             }
