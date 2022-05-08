@@ -3313,6 +3313,10 @@ PrefabInstance:
       propertyPath: platformOverlay
       value: 
       objectReference: {fileID: 921881129}
+    - target: {fileID: 5553673085424099553, guid: fbfda806fb0dde54d9a91a6237af42fc, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 14c6ee59f701d5f499dfd854946c3f4f, type: 3}
     - target: {fileID: 7330143217506163690, guid: fbfda806fb0dde54d9a91a6237af42fc, type: 3}
       propertyPath: m_RootOrder
       value: 11
