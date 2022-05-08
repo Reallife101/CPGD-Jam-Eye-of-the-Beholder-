@@ -207,8 +207,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1974815543}
-        m_TargetAssemblyTypeName: mainMenu, Assembly-CSharp
-        m_MethodName: quitgame
+        m_TargetAssemblyTypeName: menu, Assembly-CSharp
+        m_MethodName: quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -852,12 +852,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Inspired by "Im on Observation Duty"
+  m_text: 'MaidAndReady - Coder, Audio Engineer, Voice Acting, Level Designer
 
-    Made by MaidAndReady
+    Sky
+    - Coder, Level Designer
 
-    CRT
-    Shader Graph by Cyanilux
+    Grady - Artist
+
+    CRT Shader Graph by Cyanilux
 
 
 '
@@ -1155,8 +1157,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1974815543}
-        m_TargetAssemblyTypeName: mainMenu, Assembly-CSharp
-        m_MethodName: credit
+        m_TargetAssemblyTypeName: menu, Assembly-CSharp
+        m_MethodName: creditsOn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1741,16 +1743,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You are a security guard. Flip through the cameras and report any discrepancies
-    you find. Report a discrepancy by selecting what room and what kind of discrepancy
-    before clicking submit. Reports take time to process, so report only if you are
-    certain, or you may regret it...
+  m_text: 'WASD - Move
 
-    Good luck
+    LMB - Interact
+
+    RMB - Rip eye out
+
+    LShift - Sprint
 
 
-    TIP: a good memory is required
-    to succeed'
+    Red
+    - Demon eye
+
+    Blue - Normal eye
+
+    Green - Key
+
+    Purple - Double Jump'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f5b72cee820220e4c971b6ca45aa1ba5, type: 2}
   m_sharedMaterial: {fileID: 2778437123834893992, guid: f5b72cee820220e4c971b6ca45aa1ba5, type: 2}
@@ -2012,8 +2021,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1974815543}
-        m_TargetAssemblyTypeName: mainMenu, Assembly-CSharp
-        m_MethodName: back
+        m_TargetAssemblyTypeName: menu, Assembly-CSharp
+        m_MethodName: mainOn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2279,8 +2288,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1974815543}
-        m_TargetAssemblyTypeName: mainMenu, Assembly-CSharp
-        m_MethodName: htp
+        m_TargetAssemblyTypeName: menu, Assembly-CSharp
+        m_MethodName: htpOn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2574,9 +2583,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1974815538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 871ecaea02a8e1d41977452aca75657e, type: 3}
+  m_Script: {fileID: 11500000, guid: b50714b3c5ff8d84086f48c44ced421f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainmenu: {fileID: 1214922726}
+  htp: {fileID: 459841115}
+  credits: {fileID: 418117317}
 --- !u!1 &1997500041
 GameObject:
   m_ObjectHideFlags: 0
@@ -2795,8 +2807,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1974815543}
-        m_TargetAssemblyTypeName: mainMenu, Assembly-CSharp
-        m_MethodName: back
+        m_TargetAssemblyTypeName: menu, Assembly-CSharp
+        m_MethodName: mainOn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
