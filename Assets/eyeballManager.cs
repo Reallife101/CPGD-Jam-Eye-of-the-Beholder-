@@ -22,6 +22,7 @@ public class eyeballManager : MonoBehaviour
     [SerializeField] GameObject eyeBleed;
     [SerializeField] GameObject platformOverlay;
     [SerializeField] GameObject keyHand;
+    [SerializeField] GameObject jumpOverlay;
 
     public int currentEyeball = 0;
 
@@ -46,6 +47,10 @@ public class eyeballManager : MonoBehaviour
         else if (currentEyeball == 1 && lastEyeball != currentEyeball)
         {
             StartCoroutine(platformEye());
+        }
+        else if (currentEyeball == 2 && lastEyeball != currentEyeball)
+        {
+            StartCoroutine(jumpEye());
         }
         lastEyeball = currentEyeball;
 
@@ -72,6 +77,7 @@ public class eyeballManager : MonoBehaviour
 
         eyeBleed.SetActive(true);
         platformOverlay.SetActive(false);
+        jumpOverlay.SetActive(false);
         ps.turnOn();
         cam.fieldOfView = 50f;
 
@@ -103,6 +109,7 @@ public class eyeballManager : MonoBehaviour
         eyeBleed.SetActive(false);
         platformOverlay.SetActive(false);
         ps.turnOn();
+        jumpOverlay.SetActive(false);
         cam.fieldOfView = 50f;
 
         timeElapsed = 0;
@@ -132,6 +139,7 @@ public class eyeballManager : MonoBehaviour
         yield return new WaitForSeconds(.5f);
 
         eyeBleed.SetActive(false);
+        jumpOverlay.SetActive(false);
         platformOverlay.SetActive(true);
         ps.turnOff();
         cam.fieldOfView = 60f;
@@ -164,6 +172,38 @@ public class eyeballManager : MonoBehaviour
         keyHand.SetActive(t);
 
         timeElapsed = 0;
+        while (timeElapsed < transitionTime)
+        {
+            black.color = new Color(0f, 0f, 0f, Mathf.Lerp(endAlpha, 0, timeElapsed / transitionTime));
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+        black.color = new Color(0f, 0f, 0f, 0f);
+    }
+
+    IEnumerator jumpEye()
+    {
+        float timeElapsed = 0;
+        arm.SetBool("handUp", true);
+        while (timeElapsed < transitionTime)
+        {
+            black.color = new Color(0f, 0f, 0f, Mathf.Lerp(0, endAlpha, timeElapsed / transitionTime));
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+        black.color = new Color(0f, 0f, 0f, endAlpha);
+
+        au.PlayOneShot(eyeRip, .8f);
+        yield return new WaitForSeconds(.5f);
+
+        eyeBleed.SetActive(false);
+        jumpOverlay.SetActive(true);
+        platformOverlay.SetActive(false);
+        ps.turnOff();
+        cam.fieldOfView = 60f;
+
+        timeElapsed = 0;
+        arm.SetBool("handUp", false);
         while (timeElapsed < transitionTime)
         {
             black.color = new Color(0f, 0f, 0f, Mathf.Lerp(endAlpha, 0, timeElapsed / transitionTime));
