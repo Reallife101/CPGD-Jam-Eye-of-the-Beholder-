@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 648c09e6660d75f47a0034e03f34160a, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -2042,7 +2042,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &848673085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2075,7 +2075,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d2ab6d72216beee40a8b69898e9a4120, type: 2}
+  - {fileID: 2100000, guid: ec3aee7d06b9352479efec0841107ecc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2999,6 +2999,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5d62f34e237d7d45af162a2e0530b08, type: 3}
+--- !u!1 &1332490676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2092297515595417718, guid: c5d62f34e237d7d45af162a2e0530b08, type: 3}
+  m_PrefabInstance: {fileID: 1332490675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1374574229
 GameObject:
   m_ObjectHideFlags: 0
@@ -3490,6 +3495,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8018980994160221832, guid: 0fdd59914d8935841a34e92c35f25598, type: 3}
+      propertyPath: levelName
+      value: DoubleJumpLevel4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fdd59914d8935841a34e92c35f25598, type: 3}
 --- !u!1 &1714053435
@@ -3634,6 +3643,10 @@ PrefabInstance:
       propertyPath: eyeBleed
       value: 
       objectReference: {fileID: 1422378181}
+    - target: {fileID: 5144413944430218533, guid: fbfda806fb0dde54d9a91a6237af42fc, type: 3}
+      propertyPath: jumpOverlay
+      value: 
+      objectReference: {fileID: 1332490676}
     - target: {fileID: 5144413944430218533, guid: fbfda806fb0dde54d9a91a6237af42fc, type: 3}
       propertyPath: platformOverlay
       value: 

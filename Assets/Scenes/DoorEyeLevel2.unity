@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 0ac99844e4a51824fbc00021f688c0f4, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -1998,6 +1998,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8018980994160221832, guid: 0fdd59914d8935841a34e92c35f25598, type: 3}
+      propertyPath: levelName
+      value: PlatDoorLevel3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fdd59914d8935841a34e92c35f25598, type: 3}
 --- !u!1001 &1744321238
@@ -2035,6 +2039,10 @@ PrefabInstance:
       propertyPath: eyeBleed
       value: 
       objectReference: {fileID: 1745566783}
+    - target: {fileID: 5144413944430218533, guid: fbfda806fb0dde54d9a91a6237af42fc, type: 3}
+      propertyPath: jumpOverlay
+      value: 
+      objectReference: {fileID: 1745566784}
     - target: {fileID: 5144413944430218533, guid: fbfda806fb0dde54d9a91a6237af42fc, type: 3}
       propertyPath: platformOverlay
       value: 
@@ -2210,6 +2218,11 @@ GameObject:
 --- !u!1 &1745566783 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8556379462205577625, guid: c5d62f34e237d7d45af162a2e0530b08, type: 3}
+  m_PrefabInstance: {fileID: 1745566780}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1745566784 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2092297515595417718, guid: c5d62f34e237d7d45af162a2e0530b08, type: 3}
   m_PrefabInstance: {fileID: 1745566780}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1778949555

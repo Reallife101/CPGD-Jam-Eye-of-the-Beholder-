@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: f4b56964e1196b84d82d365fdbc63f5d, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -1974,6 +1974,10 @@ PrefabInstance:
     - target: {fileID: 7549050879534918479, guid: 0fdd59914d8935841a34e92c35f25598, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018980994160221832, guid: 0fdd59914d8935841a34e92c35f25598, type: 3}
+      propertyPath: levelName
+      value: DoorEyeLevel2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fdd59914d8935841a34e92c35f25598, type: 3}
