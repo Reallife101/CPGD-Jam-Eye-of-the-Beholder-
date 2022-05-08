@@ -1971,7 +1971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arm: {fileID: 1320300788}
-  transitionTime: 5
+  transitionTime: 4.5
   endAlpha: 1
   black: {fileID: 956734585}
   au: {fileID: 1320300790}
