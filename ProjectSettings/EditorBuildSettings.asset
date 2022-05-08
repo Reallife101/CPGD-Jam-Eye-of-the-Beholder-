@@ -21,11 +21,17 @@ EditorBuildSettings:
     path: Assets/Scenes/PlatformSwitch4.unity
     guid: b71ee0f6670d05643926a0d755994066
   - enabled: 1
+    path: Assets/Scenes/Challenge6.unity
+    guid: 3d01ef2787f29e24ab99b4b3d099c51f
+  - enabled: 1
     path: Assets/Scenes/DoorEyeLevel2.unity
     guid: e5e445aefca183f44bd39fb9d80a1496
   - enabled: 1
     path: Assets/Scenes/PlatDoorLevel3.unity
     guid: 9150a77c0bf0ebe48a3d7b1683b13f66
+  - enabled: 1
+    path: Assets/Scenes/Challenge5.unity
+    guid: a564b58dc5fe08545bd43348bd2f6d24
   - enabled: 1
     path: Assets/Scenes/DoubleJumpLevel4.unity
     guid: 95f648a14b1960c4b8eb806ac5b02f25

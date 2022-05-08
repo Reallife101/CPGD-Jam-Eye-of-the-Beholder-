@@ -219,6 +219,11 @@ public class eyeballManager : MonoBehaviour
         ps.turnOn();
         cam.fieldOfView = 60f;
 
+        if (idj)
+        {
+            idj.doubleJumpEnabled = true;
+        }
+
         timeElapsed = 0;
         arm.SetBool("handUp", false);
         while (timeElapsed < transitionTime)
