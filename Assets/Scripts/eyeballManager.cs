@@ -23,6 +23,7 @@ public class eyeballManager : MonoBehaviour
     [SerializeField] GameObject platformOverlay;
     [SerializeField] GameObject keyHand;
     [SerializeField] GameObject jumpOverlay;
+    [SerializeField] interactDoubleJump idj;
 
     public int currentEyeball = 0;
 
@@ -80,6 +81,10 @@ public class eyeballManager : MonoBehaviour
         jumpOverlay.SetActive(false);
         ps.turnOn();
         cam.fieldOfView = 50f;
+        if (idj)
+        {
+            idj.doubleJumpEnabled = false;
+        }
 
         arm.SetBool("handUp", false);
         timeElapsed = 0;
@@ -111,6 +116,10 @@ public class eyeballManager : MonoBehaviour
         ps.turnOn();
         jumpOverlay.SetActive(false);
         cam.fieldOfView = 50f;
+        if (idj)
+        {
+            idj.doubleJumpEnabled = false;
+        }
 
         timeElapsed = 0;
         arm.SetBool("handUp", false);
@@ -143,6 +152,10 @@ public class eyeballManager : MonoBehaviour
         platformOverlay.SetActive(true);
         ps.turnOff();
         cam.fieldOfView = 60f;
+        if (idj)
+        {
+            idj.doubleJumpEnabled = false;
+        }
 
         timeElapsed = 0;
         arm.SetBool("handUp", false);
@@ -170,6 +183,10 @@ public class eyeballManager : MonoBehaviour
         yield return new WaitForSeconds(.5f);
 
         keyHand.SetActive(t);
+        if (idj)
+        {
+            idj.doubleJumpEnabled = false;
+        }
 
         timeElapsed = 0;
         while (timeElapsed < transitionTime)
