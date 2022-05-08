@@ -5,6 +5,7 @@ using UnityEngine;
 public class respawnPlayer : MonoBehaviour
 {
     [SerializeField] Vector3 respawnPoint;
+    [SerializeField] List<AudioClip> acs;
 
     private platformSwitcher ps;
     private eyeballManager em;
@@ -25,6 +26,7 @@ public class respawnPlayer : MonoBehaviour
     
     public void respawn(Collider other)
     {
+        GetComponent<AudioSource>().PlayOneShot(acs[Random.Range(0, acs.Count)], .5f);
         other.GetComponent<CharacterController>().enabled = false;
         other.transform.position = respawnPoint;
         ps.turnOn();
