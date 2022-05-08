@@ -77,6 +77,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d9b4278b27c87904db08904821039d2a, type: 3}
   - {fileID: 8300000, guid: c5dd415dc6e7adb40bf7827262e79441, type: 3}
   - {fileID: 8300000, guid: f1e9130189ee4864d87ca99158bd20bc, type: 3}
+  - {fileID: 8300000, guid: e1779b7eef0590143a586e6c1f4a2264, type: 3}
+  - {fileID: 8300000, guid: e955898ccba09964ab13b0dff0b6d796, type: 3}
+  - {fileID: 8300000, guid: b7dd0e6fd39711a46a47e183f059edef, type: 3}
   eyeBleed: {fileID: 0}
   platformOverlay: {fileID: 0}
   keyHand: {fileID: 0}
