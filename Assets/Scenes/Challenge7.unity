@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 175c19f16148cf144a90c735f67b99e8, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -2707,6 +2707,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.65325767
       objectReference: {fileID: 0}
+    - target: {fileID: 6074459149450019878, guid: ff8d2c8f6eb5a7249aaf315ca7af06cd, type: 3}
+      propertyPath: eye
+      value: 
+      objectReference: {fileID: 1955240167}
     - target: {fileID: 6074459149660220692, guid: ff8d2c8f6eb5a7249aaf315ca7af06cd, type: 3}
       propertyPath: m_Name
       value: Door
