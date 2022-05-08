@@ -409,7 +409,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &761081554
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -442,7 +442,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: be22e8799948172469d2e0f74575d556, type: 2}
+  - {fileID: 2100000, guid: 7e928d613b0ef524b9a2d1664c8d8796, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1321,7 +1321,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4936437177506982789, guid: 61b92686bef6e6b49aa019647047ba5e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5769082451008363381, guid: 61b92686bef6e6b49aa019647047ba5e, type: 3}
       propertyPath: m_Name
