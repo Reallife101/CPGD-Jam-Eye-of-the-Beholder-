@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 971730388120562863}
   - component: {fileID: 971730388120562856}
   - component: {fileID: 971730388120562862}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DoubleJump
   m_TagString: Untagged
   m_Icon: {fileID: 0}

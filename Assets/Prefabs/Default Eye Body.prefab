@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 9037146793144855925}
   - component: {fileID: 9037146793144855927}
   - component: {fileID: 9037146793144855926}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Default Eye Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,6 +418,10 @@ PrefabInstance:
     - target: {fileID: 6129509750090061305, guid: cdd2b4854214b064e930610c6872a51e, type: 3}
       propertyPath: m_Name
       value: Blob
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129509750090061305, guid: cdd2b4854214b064e930610c6872a51e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6448189300217604697, guid: cdd2b4854214b064e930610c6872a51e, type: 3}
       propertyPath: m_Materials.Array.data[0]
